@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Age Trackers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @age_trackers.each do |age_tracker| %>
+      <tr>
+        <td><%= age_tracker.name %></td>
+        <td><%= age_tracker.age %></td>
+        <td><%= link_to 'Show', age_tracker %></td>
+        <td><%= link_to 'Edit', edit_age_tracker_path(age_tracker) %></td>
+        <td><%= link_to 'Destroy', age_tracker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Age tracker', new_age_tracker_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @age_tracker.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @age_tracker.age %>
+</p>
+
+<%= link_to 'Edit', edit_age_tracker_path(@age_tracker) %> |
+<%= link_to 'Back', age_trackers_path %>
